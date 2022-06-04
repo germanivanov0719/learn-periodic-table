@@ -83,4 +83,4 @@ while menu != "quit":
             menu = "quit"
 
 clear()
-print(cstr("До свидания! (^-人-^)").green())
+print(cstr("До свидания!").green())
