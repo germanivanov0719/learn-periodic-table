@@ -54,18 +54,13 @@ while menu != "quit":
             print(cstr(hcenter("Добро пожаловать!")))
             print("\n\n\n")
             press_enter()
-
-        if menu == "learn":
-
+        elif menu == "learn":
             modes.learn(TABLE)
-
-        if menu == "test names":
+        elif menu == "test names":
             modes.test_names(TABLE)
-
-        if menu == "test symbols":
+        elif menu == "test symbols":
             modes.test_symbols(TABLE)
-
-        if menu == "select periods":
+        elif menu == "select periods":
             TABLE = modes.select_periods()
 
         clear()
@@ -88,4 +83,4 @@ while menu != "quit":
             menu = "quit"
 
 clear()
-print(cstr("До свидания!").green())
+print(cstr("До свидания! (^-人-^)").green())

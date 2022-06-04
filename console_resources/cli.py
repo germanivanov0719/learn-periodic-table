@@ -8,11 +8,6 @@ def clear():
         os.system("cls")
     else:
         os.system("clear")
-    print(
-        ColoredString("     " * 300).black_background(),
-        end="\r" * 300,
-        flush=False,
-    )
 
 
 def hcenter(string: str) -> str:
