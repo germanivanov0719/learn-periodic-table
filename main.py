@@ -31,12 +31,12 @@ def select_menu():
             "\n" + int(menu == "retry") * "Неверный формат ввода!"
         ).red_background()
     )
-    # print(int(menu == "retry") * "Неверный формат ввода!", menu)
     print(cstr("Выбор:").blue_background(), end="")
-    # print(list(MENUS))
     try:
         menu = list(MENUS)[int(input(" ")) - 1][1]
     except ValueError:
+        menu = "retry"
+    except IndexError:
         menu = "retry"
 
 

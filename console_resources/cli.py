@@ -4,9 +4,15 @@ from console_resources.colored_output import *
 
 def clear():
     if os.name == "nt":
+        os.system("color 0")
         os.system("cls")
     else:
         os.system("clear")
+    print(
+        ColoredString("     " * 300).black_background(),
+        end="\r" * 300,
+        flush=False,
+    )
 
 
 def hcenter(string: str) -> str:
@@ -49,6 +55,9 @@ class ColoredString(str):
 
     def yellow_background(self):
         return ColoredString(YELLOW_BACKGROUND + str(self) + RESET)
+
+    def black_background(self):
+        return ColoredString(BLACK_BACKGROUND + str(self) + RESET)
 
     def italic(self):
         return ColoredString(ITALIC + str(self) + RESET)
