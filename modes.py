@@ -72,7 +72,7 @@ def test_symbols(TABLE) -> int:
             else:
                 print(
                     cstr(
-                        f"Ошибка #{total - corr}. " f"Правильно: {el.symbol}. "
+                        f"Ошибка #{total - corr}. Правильно: {el.symbol}. "
                     ).red()
                 )
     return corr

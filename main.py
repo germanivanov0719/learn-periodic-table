@@ -28,7 +28,7 @@ def select_menu():
         print(cstr(f"{i + 1}: {menu_name[0]}").yellow())
     print(
         cstr(
-            "\n" + int(menu == "retry") * "Неверный формат ввода!"
+            "\n" + int(menu == "retry") * "Ошибка, попробуйте снова"
         ).red_background()
     )
     print(cstr("Выбор:").blue_background(), end="")
@@ -48,7 +48,7 @@ def press_enter():
     input()
 
 
-while menu != "quit":
+while menu not in ["quit", "q", "выход", "exit", "shutdown"]:
     try:
         if menu == "welcome":
             print(cstr(hcenter("Добро пожаловать!")))
@@ -72,8 +72,7 @@ while menu != "quit":
         print(cstr("Попытка выхода").green_background())
         print(
             cstr(
-                "Нажмите еще раз для завершения,"
-                " или Enter для выхода в меню."
+                "Нажмите еще раз для завершения, или Enter для выхода в меню."
             ).yellow()
         )
         try:
